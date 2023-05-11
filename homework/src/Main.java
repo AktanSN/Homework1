@@ -25,16 +25,17 @@ public class Main {
 
         HouseService houseService = new HouseService(houseList);
 
-
+        System.out.println("----------------------------------------------");
         System.out.println("Total price of apartments: $" + houseService.getTotalPriceByType("Apartment"));
         System.out.println("Total price of villas: $" + houseService.getTotalPriceByType("Villa"));
         System.out.println("Total price of summer houses: $" + houseService.getTotalPriceByType("SummerHouse"));
         System.out.println("Total price of all houses: $" + houseService.getTotalPrice());
+        System.out.println("----------------------------------------------");
         System.out.println("Average square meters of apartments: " + houseService.getAverageAreaByType("Apartment"));
         System.out.println("Average square meters of villas: " + houseService.getAverageAreaByType("Villa"));
         System.out.println("Average square meters of summer houses: " + houseService.getAverageAreaByType("SummerHouse"));
         System.out.println("Average square meters of all houses: " + houseService.getAverageArea());
-
+        System.out.println("----------------------------------------------");
         List<House> filteredHouses = houseService.filterByRoomAndLivingRoom(3, 2);
         System.out.println("Houses with 3 rooms and 2 living rooms:");
         for (House house : filteredHouses) {
